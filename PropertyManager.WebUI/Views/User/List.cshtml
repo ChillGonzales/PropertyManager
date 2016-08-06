@@ -1,0 +1,16 @@
+﻿@using PropertyManager.Domain.Entities
+@model IEnumerable<User>
+
+@{
+    ViewBag.Title = "Users";
+}
+
+@foreach (var u in Model)
+{
+    <div>
+        <h3>@u.FirstName @u.LastName</h3>
+        @u.Email
+        <h4>@u.PasswordHash</h4>
+    </div>
+}
+
