@@ -9,6 +9,6 @@ namespace PropertyManager.WebUI.HtmlHelpers
 {
     public static class PagingHelpers
     {
-        public static MvcHtmlString 
+        
     }
 }

@@ -32,7 +32,7 @@ namespace PropertyManager.UnitTests
             controller.PageSize = 3;
 
             //Act
-            IEnumerable<User> result = (IEnumerable<User>)controller.List(2).Mode 1;
+            IEnumerable<User> result = (IEnumerable<User>)controller.List(2);
 
         }
     }
