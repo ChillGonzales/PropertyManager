@@ -166,7 +166,6 @@
     <Content Include="Views\Management\_ManagementLayout.cshtml" />
     <Content Include="Views\Management\Index.cshtml" />
     <Content Include="Views\Management\CreateUser.cshtml" />
-    <Content Include="Views\Management\View.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
