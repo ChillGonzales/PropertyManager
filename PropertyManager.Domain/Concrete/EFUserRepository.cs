@@ -20,9 +20,9 @@ namespace PropertyManager.Domain.Concrete
             }
         }
 
-        public async Task<ResponseCode> CreateUserAsync(User userRequest)
-        {
+        //public async Task<ResponseCode> CreateUserAsync(User userRequest)
+        //{
 
-        }
+        //}
     }
 }

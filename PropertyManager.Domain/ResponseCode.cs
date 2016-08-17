@@ -10,6 +10,5 @@ namespace PropertyManager.Domain
     {
         Success = 0,
         UserAlreadyCreated = 1,
-        UserNotFound = 2
     }
 }

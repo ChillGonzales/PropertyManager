@@ -16,5 +16,13 @@ namespace PropertyManager.Domain.Concrete
         {
             get { return context.WaitList; }
         }
+
+        public ResponseCode Add(WaitListItem item)
+        {
+            item.SignUpTS = DateTime.Now;
+            context.WaitList.Add(item);
+            context.SaveChanges();
+            return ResponseCode.Success;
+        }
     }
 }

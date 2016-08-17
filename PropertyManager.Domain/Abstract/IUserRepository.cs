@@ -10,6 +10,6 @@ namespace PropertyManager.Domain.Abstract
     public interface IUserRepository
     {
         IEnumerable<User> Users { get; }
-        Task<ResponseCode> CreateUserAsync(User userRequest);
+        //Task<ResponseCode> CreateUserAsync(User userRequest);
     }
 }
