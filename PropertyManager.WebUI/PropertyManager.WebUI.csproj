@@ -166,10 +166,8 @@
     <Content Include="Views\Management\_ManagementLayout.cshtml" />
     <Content Include="Views\Management\Index.cshtml" />
     <Content Include="Views\Management\CreateUser.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Management\ViewWaitList.cshtml" />
-=======
->>>>>>> origin/master
+    <Content Include="Views\Management\AddToWaitList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
