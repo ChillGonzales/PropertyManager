@@ -34,6 +34,7 @@ namespace PropertyManager.WebUI.Infrastructure
         private void AddBindings()
         {
             kernel.Bind<IUserRepository>().To<EFUserRepository>();
+            kernel.Bind<IWaitList>().To<EFWaitList>();
         }
     }
 }

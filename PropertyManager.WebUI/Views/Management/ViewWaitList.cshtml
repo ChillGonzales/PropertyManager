@@ -1,0 +1,19 @@
+﻿@using PropertyManager.Domain.Entities
+@model IEnumerable<WaitListItem>
+@{
+    ViewBag.Title = "Wait List";
+    Layout = "~/Views/Management/_ManagementLayout.cshtml";
+}
+
+<h2>Wait List</h2>
+@{var counter = 1;}
+@foreach (var w in Model)
+{
+    <h2>#@counter) @w.FirstName @w.LastName</h2>
+    <h4>Signed Up: @w.SignUpTS</h4>
+    <h4>Email: @w.Email</h4>
+    <h4>Phone Number: @w.PhoneNumber</h4>
+    <br />
+    counter += 1;
+}
+}

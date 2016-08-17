@@ -17,7 +17,7 @@ namespace PropertyManager.WebUI.Controllers
         {
             this.repository = userRepository;
         }
-
+        
         // GET: User
         public ActionResult List(int page = 1)
         {
@@ -26,5 +26,6 @@ namespace PropertyManager.WebUI.Controllers
                 .Skip((page - 1) * PageSize)
                 .Take(PageSize));
         }
+
     }
 }
