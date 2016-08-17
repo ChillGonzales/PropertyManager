@@ -92,6 +92,7 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\WaitListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -165,7 +166,10 @@
     <Content Include="Views\Management\_ManagementLayout.cshtml" />
     <Content Include="Views\Management\Index.cshtml" />
     <Content Include="Views\Management\CreateUser.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Management\ViewWaitList.cshtml" />
+=======
+>>>>>>> origin/master
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

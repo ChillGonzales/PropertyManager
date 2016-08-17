@@ -19,5 +19,10 @@ namespace PropertyManager.Domain.Concrete
                 return context.Users;
             }
         }
+
+        public async Task<ResponseCode> CreateUserAsync(User userRequest)
+        {
+
+        }
     }
 }
