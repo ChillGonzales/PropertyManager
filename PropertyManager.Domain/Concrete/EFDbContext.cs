@@ -17,5 +17,6 @@ namespace PropertyManager.Domain.Concrete
 
         public DbSet<User> Users { get; set; }
         public DbSet<WaitListItem> WaitList { get; set; }
+        public DbSet<PreUser> PreUsers { get; set; }
     }
 }

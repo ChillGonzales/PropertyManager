@@ -35,6 +35,7 @@ namespace PropertyManager.WebUI.Infrastructure
         {
             kernel.Bind<IUserRepository>().To<EFUserRepository>();
             kernel.Bind<IWaitList>().To<EFWaitList>();
+            kernel.Bind<IPreUserRepository>().To<EFPreUserRepository>();
         }
     }
 }

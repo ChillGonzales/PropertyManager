@@ -9,6 +9,7 @@ namespace PropertyManager.Domain
     public enum ResponseCode
     {
         Success = 0,
-        UserAlreadyCreated = 1,
+        EmailAlreadyInUse = 1,
+        PhoneNumberAlreadyInUse = 2
     }
 }

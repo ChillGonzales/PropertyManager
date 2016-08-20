@@ -84,13 +84,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IPreUserRepository.cs" />
     <Compile Include="Abstract\IUserRepository.cs" />
     <Compile Include="Abstract\IWaitList.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
+    <Compile Include="Concrete\EFPreUserRepository.cs" />
     <Compile Include="Concrete\EFUserRepository.cs" />
     <Compile Include="Concrete\EFWaitList.cs" />
+    <Compile Include="Entities\PreUser.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\WaitListItem.cs" />
+    <Compile Include="Helpers\DBHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResponseCode.cs" />
   </ItemGroup>
