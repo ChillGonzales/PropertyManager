@@ -147,7 +147,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ManagementController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\ResidentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -162,14 +162,15 @@
     <Content Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\User\List.cshtml" />
+    <Content Include="Views\Resident\List.cshtml" />
     <Content Include="Views\Management\_ManagementLayout.cshtml" />
     <Content Include="Views\Management\Index.cshtml" />
-    <Content Include="Views\Management\CreateUser.cshtml" />
     <Content Include="Views\Management\ViewWaitList.cshtml" />
     <Content Include="Views\Management\AddToWaitList.cshtml" />
     <Content Include="Views\Management\ViewUsers.cshtml" />
     <Content Include="Views\Management\AddAUser.cshtml" />
+    <Content Include="Views\Resident\_ResidentLayout.cshtml" />
+    <Content Include="Views\Resident\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

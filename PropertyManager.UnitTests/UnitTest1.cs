@@ -28,7 +28,7 @@ namespace PropertyManager.UnitTests
                 new User{FirstName="George", LastName="Bush"},
                 new User{FirstName="Barack", LastName="Obama"}
             });
-            UserController controller = new UserController(mock.Object);
+            ResidentController controller = new ResidentController(mock.Object);
             controller.PageSize = 3;
 
             //Act

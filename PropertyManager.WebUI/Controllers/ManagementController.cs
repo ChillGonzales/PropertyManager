@@ -28,11 +28,6 @@ namespace PropertyManager.WebUI.Controllers
             return View();
         }
 
-        public ActionResult CreateUser()
-        {
-            return View();
-        }
-
         [HttpGet]
         public ActionResult AddToWaitList()
         {
@@ -67,7 +62,7 @@ namespace PropertyManager.WebUI.Controllers
                 var val = await DBHelpers.CheckUser(repositoryUsers, user);
                 if (val == Domain.ResponseCode.Success) { repositoryUsers.Add(user); }
                 else { ViewBag.ResponseCode = val; }
-                return View(ViewBag);
+                return View();
             }
             return RedirectToAction("ViewUsers","Management");
         }
