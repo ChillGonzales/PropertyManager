@@ -20,13 +20,13 @@ namespace PropertyManager.Domain.Concrete
             }
         }
 
-        public ResponseCode Add(PreUser user)
+        public PreUserResponseCode Add(PreUser user)
         {
             user.AccountCreationTS = DateTime.Now;
             user.EmailConfirmed = "0";
             context.PreUsers.Add(user);
             context.SaveChanges();
-            return ResponseCode.Success;
+            return PreUserResponseCode.Success;
         }
     }
 }

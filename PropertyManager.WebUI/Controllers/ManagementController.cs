@@ -60,7 +60,7 @@ namespace PropertyManager.WebUI.Controllers
             if (user != null)
             {
                 var val = await DBHelpers.CheckUser(repositoryUsers, user);
-                if (val == Domain.ResponseCode.Success) { repositoryUsers.Add(user); }
+                if (val == Domain.PreUserResponseCode.Success) { repositoryUsers.Add(user); }
                 else { ViewBag.ResponseCode = val; }
                 return View();
             }

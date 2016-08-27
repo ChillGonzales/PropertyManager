@@ -25,5 +25,11 @@ namespace PropertyManager.WebUI.Controllers
             return View();
         }
 
+        //GET: CreateAccount
+        public async ActionResult CreateResult()
+        {
+
+        }
+
     }
 }

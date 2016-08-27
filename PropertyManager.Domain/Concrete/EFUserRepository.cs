@@ -20,9 +20,14 @@ namespace PropertyManager.Domain.Concrete
             }
         }
 
-        //public async Task<ResponseCode> CreateUserAsync(User userRequest)
-        //{
-
-        //}
+        public async Task<CreateUserResponseCode> CreateUserAsync(User userRequest)
+        {
+            userRequest.AccountCreationTS = DateTime.Now;
+            userRequest.EmailConfirmed = "0";
+            await Task.Run(new Func<>)
+            context.Users.Add(userRequest);
+            context.SaveChanges();
+            return CreateUserResponseCode.Success;
+        }
     }
 }

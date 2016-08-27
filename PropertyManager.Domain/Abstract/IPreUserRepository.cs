@@ -10,6 +10,6 @@ namespace PropertyManager.Domain.Abstract
     public interface IPreUserRepository
     {
         IEnumerable<PreUser> PreUsers { get; }
-        ResponseCode Add(PreUser user);
+        PreUserResponseCode Add(PreUser user);
     }
 }

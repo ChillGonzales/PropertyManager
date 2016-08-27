@@ -10,6 +10,6 @@ namespace PropertyManager.Domain.Abstract
     public interface IWaitList
     {
         IEnumerable<WaitListItem> WaitList { get; }
-        ResponseCode Add(WaitListItem item);
+        PreUserResponseCode Add(WaitListItem item);
     }
 }
