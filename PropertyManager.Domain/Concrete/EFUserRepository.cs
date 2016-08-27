@@ -24,9 +24,12 @@ namespace PropertyManager.Domain.Concrete
         {
             userRequest.AccountCreationTS = DateTime.Now;
             userRequest.EmailConfirmed = "0";
-            await Task.Run(new Func<>)
-            context.Users.Add(userRequest);
-            context.SaveChanges();
+            await Task.Run(new Func<int>(() =>
+            {
+                context.Users.Add(userRequest);
+                context.SaveChanges();
+                return 0;
+            }));
             return CreateUserResponseCode.Success;
         }
     }

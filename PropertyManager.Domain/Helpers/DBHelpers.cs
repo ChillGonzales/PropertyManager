@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CryptSharp;
 
 namespace PropertyManager.Domain.Helpers
 {
@@ -35,12 +36,25 @@ namespace PropertyManager.Domain.Helpers
         {
             var respCode = await Task.Run<CreateUserResponseCode>(new Func<CreateUserResponseCode>(() =>
                 {
-                    if (preUserRepo.PreUsers.Any(x => x.Email.ToLower() == user.Email.ToLower() && x.FirstName.ToLower() == user.FirstName.ToLower() && x.LastName.ToLower() == user.LastName.ToLower()))
+                    if (userRepo.Users.Any(x => x.Email.ToLower() == user.Email.ToLower() && x.FirstName.ToLower() == user.FirstName.ToLower() && x.LastName.ToLower() == user.LastName.ToLower()))
                     {
-                        userRepo
+                        return CreateUserResponseCode.UserAlreadyInUse;
+                    }
+                    else if (preUserRepo.PreUsers.Any(x => x.Email.ToLower() == user.Email.ToLower() && x.FirstName.ToLower() == user.FirstName.ToLower() && x.LastName.ToLower() == user.LastName.ToLower()))
+                    {
+                        userRepo.CreateUserAsync(user);
                         return CreateUserResponseCode.Success;
                     }
+                    else { return CreateUserResponseCode.UserNotFound; }
                 }));
+
+            return respCode;
+        }
+
+        public static async Task<byte[]> CreateNewSalt()
+        {
+            var salt = await Task.Run(new Func<string>(() => { return CryptSharp.Crypter.Blowfish.GenerateSalt(); }));
+            return Encoding.ASCII.GetBytes(salt);
         }
     }
 }

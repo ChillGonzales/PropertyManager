@@ -12,6 +12,8 @@ namespace PropertyManager.Domain.Entities
     public class User
     {
         public int ID { get; set; }
+        [DisplayName("User Name")]
+        public string UserName { get; set; }
         [DisplayName("First Name")]
         public string FirstName { get; set; }
         [DisplayName("Last Name")]
@@ -20,6 +22,7 @@ namespace PropertyManager.Domain.Entities
         public string PasswordHash { get; set; }
         public string PasswordSalt { get; set; }
         public string EmailConfirmed { get; set; }
+        [DisplayName("Phone Number")]
         public string PhoneNumber { get; set; }
         public DateTime AccountCreationTS { get; set; }
     }

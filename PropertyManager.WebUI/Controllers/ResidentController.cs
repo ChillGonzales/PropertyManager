@@ -5,6 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using PropertyManager.Domain.Entities;
 using PropertyManager.Domain.Abstract;
+using System.Threading.Tasks;
+using PropertyManager.Domain.Helpers;
+using CryptSharp;
+using System.Text;
 
 namespace PropertyManager.WebUI.Controllers
 {
@@ -26,9 +30,23 @@ namespace PropertyManager.WebUI.Controllers
         }
 
         //GET: CreateAccount
-        public async ActionResult CreateResult()
+        public ActionResult CreateAccount()
         {
+            return View();
+        }
 
+        //POST: CreateAccount
+        public async Task<ActionResult> CreateAccount(User user, FormCollection form)
+        {
+            var saltyBytes = await DBHelpers.CreateNewSalt();
+            user.PasswordSalt = Encoding.ASCII.GetString(saltyBytes);
+            var pwdBytes = Encoding.ASCII.GetBytes(form["pwd"]);
+            byte[] hashed = null;
+            await Task.Run(new Func<byte[]>(() => {
+                CryptSharp.Utility.SCrypt.ComputeKey(pwdBytes, saltyBytes, 262144, 8, 1, null, hashed);
+                return hashed;
+            }));
+            return View();
         }
 
     }
